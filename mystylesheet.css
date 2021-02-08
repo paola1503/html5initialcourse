@@ -1,0 +1,12 @@
+#webheader {background-color: #FFDBEF;}
+#mainnavigation {background-color: #FF66C4;}
+#sidebar {background-color: #FF1D67; float:left; height:832px;}
+#maincontent {background-color: #FFA5D7; 
+					margin-left:150px;
+					padding-left:25px;
+					padding-top:25px;}
+#mainfooter {background-color: #C62989; 
+				clear:both; 
+				margin-top:75px;}
+li{background-color: #E6A7CE; 
+	display:inline;}

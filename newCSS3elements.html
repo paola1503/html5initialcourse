@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Exploring New CSS3 Elements</title>
+
+<style>
+#main{width:500px;
+	text-align: center;
+	margin:160px auto;
+	padding:15px;
+	border:3px solid #FF1D67;
+	border-radius:10px;
+	box-shadow:#999 5px 5px 10px;
+	background: -webkit-radial-gradient(center, ellipse, #FD51B0, #FFDBEF);
+				-moz-radial-gradient(center, ellipse, #FD51B0, #FFDBEF);
+				-o-radial-gradient(center, ellipse, #FD51B0, #FFDBEF);
+				-ms-radial-gradient(center, ellipse, #FD51B0, #FFDBEF);
+	outline:2px dashed #FF1D67;
+	outline-offset: 15px;
+	transform:scale(1.5);
+	transform:skew(10deg);}
+#main:hover{transform:rotate(30deg);
+	transition:transform 1s ease 0.5s;}
+@font-face{
+font-family: 'BrushScript';
+src:url('BrushScript.ttf');}
+
+#title{
+	font:bold 70px 'BrushScript';
+	text-shadow:#FF1D67 3px 3px 5px;
+	color: rgba(0,0,0,0.9);}
+</style>
+</head>
+
+<body>
+<header id="main">
+<span id="title">I love you</span>
+</header>
+</body>
+</html>
