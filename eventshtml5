@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+<title>Cat says hi and changes size</title>
+<script>
+var image;
+
+function cathello(){
+	alert("Hi friend");
+}
+	
+function catmanagement(){
+	image=document.getElementsByTagName("img")[0];
+
+	image.addEventListener("mouseover",biggercat,false);
+	image.addEventListener("mouseout",normalcat,false);
+	image.addEventListener("click",cathello,false);
+}
+
+function biggercat(){
+	image.width=700;
+	image.height=700;
+}
+
+function normalcat(){
+	image.width=564;
+	image.height=564;
+}
+
+	
+window.onload=catmanagement;
+</script>
+
+</head>
+
+<body>
+<p>
+<img src="images/purplepusheen.jpg">
+</p>
+
+
+</body>
+</html>
