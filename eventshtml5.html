@@ -2,41 +2,43 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-<title>Cat says hi and changes size</title>
+<title>Cats say change size and say hi</title>
 <script>
-var image;
 
-function cathello(){
+var images=document.getElementsByTagName("img");
+
+window.onload=function(){
+	for(var i=0;i<images.length;i++){
+	
+	images[i].addEventListener("click",cathello,false);
+	images[i].addEventListener("mouseover",grow,false);
+	images[i].addEventListener("mouseout",normalsize,false);
+	}}
+
+		
+	function grow(){
+		this.width=700;
+		this.height=700;
+		}
+		
+	function normalsize(){
+		this.width=300
+		this.height=300;
+		}
+		
+	function cathello(){
 	alert("Hi friend");
-}
-	
-function catmanagement(){
-	image=document.getElementsByTagName("img")[0];
-
-	image.addEventListener("mouseover",biggercat,false);
-	image.addEventListener("mouseout",normalcat,false);
-	image.addEventListener("click",cathello,false);
-}
-
-function biggercat(){
-	image.width=700;
-	image.height=700;
-}
-
-function normalcat(){
-	image.width=564;
-	image.height=564;
-}
-
-	
-window.onload=catmanagement;
+		}	
 </script>
 
 </head>
 
 <body>
 <p>
-<img src="images/purplepusheen.jpg">
+<img src="images/purplepusheen.jpg" width="300" height="300">
+<img src="images/pusheenpinkunicorn.jpg" width="300" height="300">
+<img src="images/pusheenbusy.jpg" width="300" height="300">
+<img src="images/pusheenlikesyou.jpg" width="300" height="300">
 </p>
 
 
