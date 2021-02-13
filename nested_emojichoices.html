@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+<title>Emoji choices</title>
+
+<script>
+function events(){
+	var element1=document.getElementsByTagName("p")[1];
+	var element2=document.getElementsByTagName("img")[0];
+	element1.addEventListener("click",message2,true);
+	element2.addEventListener("click",message1,false);}
+	
+function message1(){
+	alert("And, in my opinion, the coolest one");}
+	
+function message2(){
+	alert("Good choice!");}
+	
+window.addEventListener("load",events,false);
+</script>
+</head>
+
+<body>
+<p>What kind of emoji do you prefer?</p>
+<p>a) <img src="images/emoji.jpeg" width=100 height=100> b) :)</p>
+
+</body>
+
+</html>
