@@ -3,16 +3,27 @@
 <head>
 <meta charset="utf-8">
 <title>Hello video</title>
-<link href="videos/stylevideos.css" rel="stylesheet">
+<link href="videos/stylevideo.css" rel="stylesheet">
+<script src="videos/jsvideo.js"></script>
 
 </head>
 
 <body>
 <section id="video">
-	<video id="myvideo" width=800 controls loop poster="videos/posterhello.png">
+	<video id="myvideo" width=800 loop poster="videos/posterhello.png">
 	<source src="videos/videohello.mp4">
 	<source src="videos/videohello.ogg">
 	</video>
+	
+<nav>
+	<div id="buttons">
+	<button type="button" id="play">Play</button>
+	</div>
+	
+	<div id="bar">
+	<div id="progressbar"> </div>
+	</div>
+</nav>
 </section>
 </body>
 </html>
