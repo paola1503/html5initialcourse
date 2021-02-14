@@ -24,4 +24,32 @@ q:before, q:after { content:''; }
 	text-align:center;
 	background:#FF0099;
 	border:2px solid #191919;
-	border-radius:8px;}
+	border-radius:8px;
+	}
+	
+#nav{
+	margin:5px 0;
+	}
+	
+#buttons{
+	float:left;
+	width:100px;
+	height:80px;
+	margin-left:70px;
+	}
+	
+#bar{
+	background-color:#FFF;
+	width:743px;
+	height:13px;
+	border:1px solid #666;
+	padding:3px;
+	margin-left:150px;
+	}
+	
+#progressbar{
+	position:absolute;
+	width:0px;
+	height:13px;
+	background-color:rgba(0,0,150,2);
+	}
