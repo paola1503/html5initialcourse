@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*CSS Document*/
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+ol { padding-left: 1.4em; list-style: decimal; }
+ul { padding-left: 1.4em; list-style:square; }
+q:before, q:after { content:''; }
+
+/*End of CSS reset*/
+	
+#nav{
+	margin:5px 0;
+	}
+	
+#buttons{
+	float:left;
+	width:100px;
+	height:80px;
+	margin-left:70px;
+	}
+	
+#bar{
+	background-color:#FFF;
+	width:743px;
+	height:13px;
+	border:1px solid #666;
+	padding:3px;
+	margin-left:150px;
+	}
+	
+#progressbar{
+	position:absolute;
+	width:0px;
+	height:13px;
+	background-color:rgba(0,0,150,2);
+	}
