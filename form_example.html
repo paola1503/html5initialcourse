@@ -9,14 +9,14 @@
 
 <section>
 <form name="myform" id="myform" method="get" autocomplete="on">
-	Name:&nbsp;<input type="text" name="name" id="name"><br><br>
-	Age:&nbsp;<input type="number" name="age" id="age" min="1" max="130"><br><br>
-	Email:&nbsp;<input type="email" name="email" id="email"><br><br>
-	Website:&nbsp;<input type="url" name="url" id="url">
+	Name:&nbsp;<input type="text" name="name" id="name" required autofocus><br><br>
+	Email:&nbsp;<input type="email" name="email" id="email" required><br><br>
+	Date of birth:&nbsp;<input type="date" name="date" id="date"><br><br>
+	Website:&nbsp;<input type="url" name="url" id="url" placeholder="show us what you can do"><br><br>
+	How would you rate your coding skills?:&nbsp;<input type="range" name="skills" id="skills"><br><br>
 	
 	<input type="submit" value="Send">
 </form>
 </section>
-
 </body>
 </html>
