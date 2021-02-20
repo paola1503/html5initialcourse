@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Form example 2</title>
+</head>
+
 
 <style>
 table{
@@ -19,8 +21,29 @@ td{
 
 </style>
 
-</head>
+<script>
+var age;
 
+function start(){
+	age=document.getElementById("age");
+	age.addEventListener("change",change_range,false);
+	}
+	
+function change_range(){
+	var output=document.getElementById("range");
+	var calculate=age.value-5;
+	if (calculate<5){
+		calculate=0;
+		age.value=5;
+		}
+	output.innerHTML=calculate+" to "+age.value;
+	}
+
+
+	
+
+window.addEventListener("load",start,false);
+</script>
 
 <body>
 
@@ -37,13 +60,17 @@ td{
 
 
 <table><tr><td>
-Name:</td><td><input type="text" name="name" id="name"></td></tr>
+Username:</td><td><input type="text" name="username" id="username" maxlength="10" required></td></tr>
 <tr><td>
-Surname:</td><td><input type="text" name="surname" id="surname"></td></tr>
+Email:</td><td><input type="email" name="email" id="email" required></td></tr>
 <tr><td>
-Age:</td><td><input type="number" name="age" id="age" min="1" max="100"></td></tr>
+Age range:</td><td><input type="range" name="age" id="age" min="0" max="120" value="5" step="5"></td></tr>
+<tr><td>
+<output id="range">0 to 5</output>
+</tr></td>
 <tr><td>
 How have you heard from us?:</td><td><input type="text" name="heard" id="heard" list="options"></tr></td>
+
 <tr><td>
 </td><td><input type="submit" name="send" value="Sign up"></td></tr>
 </table>
