@@ -13,15 +13,26 @@ section{
 
 <script>
 function start(){
-	var element=document.getElementById("canvas");
-	canvas=element.getContext("2d");
+	var element1=document.getElementById("canvas1");
+	canvas1=element1.getContext("2d");
+		
+	var gradient1=canvas1.createLinearGradient(0,150,500,150);
+	gradient1.addColorStop(0,"#FFE2FB");
+	gradient1.addColorStop(1,"#FF00DE");
+	canvas1.fillStyle=gradient1;
 	
-	var gradient=canvas.createLinearGradient(0,150,500,150);
-	gradient.addColorStop(0,"#FFE2FB");
-	gradient.addColorStop(1,"#FF00DE");
-	canvas.fillStyle=gradient;
+	canvas1.fillRect(0,0,500,300);
 	
-	canvas.fillRect(0,0,500,300);
+	var element2=document.getElementById("canvas2");
+	canvas2=element2.getContext("2d");
+	
+	var gradient2=canvas2.createRadialGradient(250,150,50,250,150,300);
+	gradient2.addColorStop(0,"#FFE2FB");
+	gradient2.addColorStop(0.5,"#FF00DE");
+	gradient2.addColorStop(1,"#000000");
+	canvas2.fillStyle=gradient2;
+	
+	canvas2.fillRect(0,0,500,300);
 	}
 
 window.addEventListener("load",start,false);
@@ -30,12 +41,18 @@ window.addEventListener("load",start,false);
 </head>
 
 <body>
-<section id="drawing">
-<canvas id="canvas" width="500" height="300">
+<section id="drawing1">
+<canvas id="canvas1" width="500" height="300">
 
 </canvas>
 
 </section>
 
+<section id="drawing2">
+<canvas id="canvas2" width="500" height="300">
+
+</canvas>
+
+</section>
 </body>
 </html>
