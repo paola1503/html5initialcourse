@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Drawing Practice</title>
+
+<style>
+#canvas{
+	border:1px #B121FF solid;}
+
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	
+	canvas.beginPath();
+	canvas.moveTo(200,175);
+	canvas.lineTo(300,175);
+	canvas.lineTo(250,125);
+	canvas.lineTo(200,175);
+	canvas.clip();
+	
+	canvas.beginPath();
+	for(i=0;i<250;i+=10){
+		canvas.moveTo(0,i);
+		canvas.lineTo(500,i);
+	}
+	
+	canvas.stroke();
+	
+	
+	}
+	
+window.addEventListener("load",start,false);
+
+</script>
+
+</head>
+
+<body>
+<section id="drawing">
+<canvas id="canvas" width=500 height=300>
+
+</canvas>
+
+</section>
+</body>
+</html>
