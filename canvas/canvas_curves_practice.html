@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Curves Practice</title>
+
+<style>
+#canvas{
+	border:1px solid #FA11B4;
+	}
+
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	canvas.beginPath();
+	canvas.arc(400,140,50,0,2*Math.PI,true);
+	
+	canvas.moveTo(100,100);
+	canvas.quadraticCurveTo(200,50,100,200);
+	canvas.moveTo(100,100);
+	canvas.quadraticCurveTo(0,50,100,200);
+	
+	canvas.moveTo(250,50);
+	canvas.bezierCurveTo(100,125,400,125,250,200);
+	canvas.moveTo(250,50);
+	canvas.bezierCurveTo(400,125,100,125,250,200);
+	
+	canvas.stroke();
+	}
+
+window.addEventListener("load",start,false);
+</script>
+</head>
+
+<body>
+<section>
+<canvas width="500" height="300" id="canvas">
+
+</canvas>
+</body>
+</html>
