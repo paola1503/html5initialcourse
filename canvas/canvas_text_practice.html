@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Text Practice</title>
+
+<style>
+#canvas{
+	border:1px solid #E030FF;
+	}
+	
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	canvas.shadowColor="rgba(0,0,0,0.5)";
+	canvas.shadowOffsetX=4;
+	canvas.shadowOffsetY=4;
+	canvas.shadowBlur=5;
+	canvas.font="italic bold 48px verdana";
+	canvas.textAlign="center";
+	canvas.textBaseline="middle";
+	canvas.fillText("Faith + Hope + Love",400,300);
+	var measurements=canvas.measureText("Faith + Hope + Love");
+	}
+
+window.addEventListener("load",start,false);
+</script>
+</head>
+
+<body>
+<section>
+<canvas width="800" height="600" id="canvas">
+</canvas>
+</section>
+</body>
+</html>
