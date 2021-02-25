@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Silly Face</title>
+
+<style>
+#canvas{
+	border:1px solid #F6FF00;
+	background-color:#F6FF00;
+	}
+	
+section{
+	width:800px;
+	position:relative;
+	margin:auto;
+	}
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	
+	canvas.arc(400,300,200,0,2*Math.PI,false);
+	canvas.stroke();
+	
+	canvas.lineWidth=10;
+	canvas.lineCap="round";
+	canvas.beginPath();
+	canvas.arc(400,320,150,0,Math.PI,false);
+	canvas.stroke();
+	
+	canvas.lineWidth=5;
+	canvas.lineJoin="miter";
+	canvas.miterLimit=3;
+	canvas.beginPath();
+	canvas.moveTo(400,275);
+	canvas.lineTo(425,300);
+	canvas.lineTo(400,300);
+	canvas.stroke();
+	
+	canvas.lineWidth=1;
+	canvas.beginPath();
+	canvas.arc(340,230,15,0,2*Math.PI,false);
+	canvas.arc(460,230,15,0,2*Math.PI,false);
+	canvas.fill();
+	
+	canvas.beginPath();
+	canvas.arc(325,225,30,0,2*Math.PI,false);
+	canvas.stroke();
+	
+	canvas.beginPath();
+	canvas.arc(475,225,30,0,2*Math.PI,false);
+	canvas.stroke();
+	
+	}
+
+window.addEventListener("load",start,false);
+</script>
+
+</head>
+
+<body>
+<section>
+<canvas width="800" height="600" id="canvas">
+
+</canvas>
+</section>
+</body>
+</html>
