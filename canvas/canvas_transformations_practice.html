@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Transformations Practice</title>
+
+<style>
+#canvas{
+	border:1px solid #7AF2FF;
+	}
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	canvas.font="bold 20px verdana";
+	canvas.fillText("Hello everyone",50,20);
+	canvas.translate(100,100);
+	canvas.scale(3,3);
+	canvas.rotate(Math.PI);
+	canvas.fillText("Hello everyone",-200,-150);
+	}
+
+window.addEventListener("load",start,false);
+</script>
+</head>
+
+<body>
+<section>
+<canvas width=1200 height=900 id="canvas">
+</canvas>
+</section>
+</body>
+</html>
