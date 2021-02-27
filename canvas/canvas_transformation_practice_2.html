@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Transformations Practice 2</title>
+
+<style>
+#canvas{
+	border:1px solid #FFA600;
+	}
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	canvas.transform(3,0,0,1,0,0);
+	canvas.font="bold 20px verdana";
+	canvas.save();
+	canvas.fillText("Hello!",50,50);
+	canvas.setTransform(1,Math.PI/180*55,1,3,30,70);
+	canvas.fillText("How are u?",50,50);
+	canvas.restore();
+	canvas.translate(100,400);
+	canvas.scale(1.5,1.5);
+	canvas.fillText("I'm fine, thank u",0,0);
+	}
+
+window.addEventListener("load",start,false);
+</script>
+</head>
+
+<body>
+<section>
+<canvas width=1200 height=900 id="canvas">
+</canvas>
+</section>
+</body>
+</html>
