@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas | Overlay and images</title>
+
+<style>
+#canvas{
+	border:1px solid #6903AD;
+	}
+</style>
+
+<script>
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	canvas.fillStyle="#AD039A";
+	canvas.fillRect(110,10,195,50);
+	
+	canvas.globalCompositeOperation="destination-atop";
+	
+	canvas.fillStyle="#FF96F3";
+	canvas.font="bold 40px verdana";
+	canvas.textAlign="center";
+	canvas.textBaseline="middle";
+	canvas.fillText("Hello beautiful",200,30);
+	
+	var image=new Image();
+	image.src="file:///Users/Paola/Documents/Cursos/HTML5/images/pusheen.jpg";
+	image.addEventListener("load",function(){
+		canvas.drawImage(image,0,0,element.width,element.height)},false);
+	}
+
+window.addEventListener("load",start,false);
+</script>
+</head>
+
+<body>
+<section>
+<canvas width=400 height=400 id="canvas">
+</canvas>
+</section>
+</body>
+</html>
