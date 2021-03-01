@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas | Animations</title>
+
+<style>
+#canvas{
+	border:1px solid #916EFA;
+	}
+</style>
+
+<script>
+var y=300;
+var state="going_down";
+
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	setInterval(animation,50);
+}
+	
+function animation(){
+	if(y<850 && state=="going_down"){
+		canvas.clearRect(0,0,1200,900);
+
+		canvas.beginPath();
+		canvas.arc(500,y,40,0,Math.PI*2,false);
+		canvas.fill();
+	
+		y+=50;
+		}
+	if(y==850){
+		state="going_up";
+		}
+	if(y>=300 && state=="going_up"){
+		canvas.clearRect(0,0,1200,900);
+
+		canvas.beginPath();
+		canvas.arc(500,y,40,0,Math.PI*2,false);
+		canvas.fill();
+	
+		y-=50;
+		}
+		
+	if(y==300){
+		state="going_down";
+		}
+}
+	
+window.addEventListener("load",start,false);
+
+</script>
+</head>
+
+<body>
+<section>
+<canvas width=1200 height=900 id="canvas">
+</canvas>
+</section>
+</body>
+</html>
