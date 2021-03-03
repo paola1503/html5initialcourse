@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Canvas | Animations</title>
+<title>Canvas | Ball Animation</title>
 
 <style>
 #canvas{
@@ -12,39 +12,44 @@
 
 <script>
 var y=300;
-var state="going_down";
+var state="goingdown";
+var toplimit=y;
+var horizontal=0;
 
 function start(){
 	var element=document.getElementById("canvas");
 	canvas=element.getContext("2d");
-	setInterval(animation,50);
+	setInterval(animation,25);
 }
 	
 function animation(){
-	if(y<850 && state=="going_down"){
+	if(y<850 && state=="goingdown"){
 		canvas.clearRect(0,0,1200,900);
 
 		canvas.beginPath();
-		canvas.arc(500,y,40,0,Math.PI*2,false);
+		canvas.arc(500+horizontal,y,40,0,Math.PI*2,false);
 		canvas.fill();
 	
 		y+=50;
+		horizontal+=4;
 		}
 	if(y==850){
-		state="going_up";
+		toplimit+=50;
+		state="goingup";
 		}
-	if(y>=300 && state=="going_up"){
+	if(y>=toplimit && state=="goingup"){
 		canvas.clearRect(0,0,1200,900);
 
 		canvas.beginPath();
-		canvas.arc(500,y,40,0,Math.PI*2,false);
+		canvas.arc(500+horizontal,y,40,0,Math.PI*2,false);
 		canvas.fill();
 	
 		y-=50;
+		horizontal+=4;
 		}
 		
-	if(y==300){
-		state="going_down";
+	if(y==toplimit){
+		state="goingdown";
 		}
 }
 	
