@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas | Eyes Animation</title>
+
+<style>
+#canvas{
+	border:1px solid #916EFA;
+	}
+</style>
+
+<script>
+
+function start(){
+	var element=document.getElementById("canvas");
+	canvas=element.getContext("2d");
+	window.addEventListener("mousemove",animation,false);
+}
+	
+function animation(e){
+	canvas.clearRect(0,0,1200,900);
+	var xmouse=e.clientX;
+	var ymouse=e.clientY;
+	var xcenter=550;
+	var ycenter=325;
+	var angle=Math.atan2(ymouse-ycenter,xmouse-xcenter);
+	var x=xcenter+Math.round(Math.cos(angle)*10);
+	var y=ycenter+Math.round(Math.sin(angle)*10);
+	
+	canvas.beginPath();
+	canvas.arc(xcenter,ycenter,20,0,Math.PI*2,false);
+	canvas.moveTo(620,325);
+	canvas.arc(600,ycenter,20,0,Math.PI*2,false);
+	canvas.stroke();
+	
+	canvas.beginPath();
+	canvas.arc(x,y,10,0,Math.PI*2,false);
+	canvas.moveTo(x,y);
+	canvas.arc(x+50,y,10,0,Math.PI*2,false);
+	canvas.fill();
+	}
+	
+window.addEventListener("load",start,false);
+
+</script>
+</head>
+
+<body>
+<section>
+<canvas width=1200 height=900 id="canvas">
+</canvas>
+</section>
+</body>
+</html>
