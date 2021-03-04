@@ -4,30 +4,9 @@
 <meta charset="utf-8">
 <title>API Drag & Drop</title>
 
-<style>
-#imagebox{
-	float:left;
-	margin:10px;
-	border:1px solid #8520A1;
-	}
-	
-#destinationarea{
-	float:right;
-	width:640px;
-	height:712px;
-	margin:10px;
-	border:1px solid #8520A1;
-	}
-</style>
+<link rel="stylesheet" href="dragdropsandwich_css.css">
 
-<script>
-function start(){
-	var elem_origin=document.getElementById("image");
-	elem_origin.addEventListener("dragend",function(){alert("Don't disturb me when I'm eating");},false);
-	}
-
-window.addEventListener("load",start,false);
-</script>
+<script src="dragdropsandwich_js.js"> </script>
 </head>
 
 <body>
@@ -36,7 +15,7 @@ window.addEventListener("load",start,false);
 </section>
 
 <section id="destinationarea">
-Drag the image here
+Drag and drop the image here
 </section>
 </body>
 </html>
