@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container{
+	width:50%;
+	margin:auto;
+	padding-top:50px;	
+}
+
+#formarea{
+	float:left;
+	padding:20px;
+	border:1px solid #039;
+}
+
+#dataarea{
+	float:right;
+	width:300px;
+	margin-left:20px;
+	padding:20px;
+	border:1px solid #F00;
+}
+
+#key, #value{
+	width:180px;
+}
+
+#dataarea div{
+	padding:15px;
+	border-bottom:3px solid #00F;
+}
