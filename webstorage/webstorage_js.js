@@ -8,7 +8,7 @@ function start(){
 function new_item(){
 	var key=document.getElementById("key").value;
 	var value=document.getElementById("value").value;
-	sessionStorage.setItem(key,value);
+	localStorage.setItem(key,value);
 	read_show(key);
 	document.getElementById("key").value="";
 	document.getElementById("value").value="";
@@ -17,22 +17,22 @@ function new_item(){
 function read_show(key){
 	var dataarea=document.getElementById("dataarea");
 	dataarea.innerHTML='<div><button onclick="remove_all()"">Remove all</button></div>';
-	for(i=0;i<sessionStorage.length;i++){
-		var key=sessionStorage.key(i);
-		var thevalue=sessionStorage.getItem(key);
+	for(i=0;i<localStorage.length;i++){
+		var key=localStorage.key(i);
+		var thevalue=localStorage.getItem(key);
 		dataarea.innerHTML+='<div>' + key + '--' + thevalue + '<br><button onclick="remove_item(\''+key+'\')">Remove</button></div>'}
 	}
 	
 function remove_all(){
 	if(confirm("Are you sure?")){
-		sessionStorage.clear();
+		localStorage.clear();
 		read_show();
 		}
 	}
 	
 function remove_item(key){
 	if(confirm("Are you sure?")){
-		sessionStorage.removeItem(key);
+		localStorage.removeItem(key);
 		read_show();
 		}
 	}
