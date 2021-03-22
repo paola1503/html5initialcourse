@@ -26,7 +26,7 @@ function process(e){
 	
 function show_info(e){
 	var the_result=e.target.result;
-	dataarea.innerHTML+="<img src='"+the_result+"' width='85%'>";
+	dataarea.innerHTML+="<img src='"+the_result+"'>";
 	}
 
 window.addEventListener("load",start,false);
