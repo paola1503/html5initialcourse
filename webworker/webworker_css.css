@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*CSS Document*/
+
+#formarea{
+	float:left;
+	padding:30px;
+	border:2px dotted #0000FF;
+	}
+	
+#dataarea{
+	float:left;
+	width:600px;
+	margin-left:50px;
+	padding:30px;
+	border:2px dotted #FF0000;
+	}
