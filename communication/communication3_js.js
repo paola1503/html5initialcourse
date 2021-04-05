@@ -33,7 +33,7 @@ function bar_state(e){
 	}
 	
 function show(e){
-	dataarea.innerHTML="Done!":
+	dataarea.innerHTML="Done!";
 	}
 
 window.addEventListener("load",start,false);
