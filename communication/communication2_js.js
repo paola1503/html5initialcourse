@@ -13,7 +13,7 @@ function send_data(){
 	data.append("name",the_name);
 	data.append("surname",the_surname);
 	var url="communication2.php";
-	var request=new XMLTHttpRequest();
+	var request=new XMLHttpRequest();
 	request.addEventListener("load",show,false);
 	request.open("POST",url,true);
 	request.send(data);
