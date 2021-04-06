@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content{
+	float:left;
+	padding:30px;
+	border:2px dotted #F00;
+	}
+
+#dataarea{
+	float:left;
+	width:600px;
+	margin-left:30px;
+	padding:30px;
+	border:2px dotted #00F;
+	}
+	
+#content span{
+	color:#0000FF;
+	cursor:pointer;
+	}
