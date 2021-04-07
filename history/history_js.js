@@ -2,6 +2,7 @@
 
 function start(){
 	dataarea=document.getElementById("dataarea");
+	dataarea.innerHTML="This is Page 1";
 	url=document.getElementById("url");
 	url.addEventListener("click",changeurl,false);
 	window.addEventListener("popstate",newurl,false);
